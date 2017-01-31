@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /**
  * PHP library for file management.
  * 
@@ -35,7 +35,7 @@ class FileException extends \Exception {
      * @param int    $error  → error code (Optional)
      * @param int    $status → HTTP response status code (Optional)
      */
-    public function __construct(string $msg = '', int $error = 0, int $status = 0) {
+    public function __construct($msg = '', $error = 0, $status = 0) {
 
         $this->message    = $msg;
         $this->code       = $error;
