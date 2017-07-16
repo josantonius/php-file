@@ -11,8 +11,6 @@
 
 namespace Josantonius\File;
 
-# use Josantonius\File\Exception\FileException;
-
 /**
  * File handler.
  *
@@ -32,7 +30,7 @@ class File {
      */
     public static function searchString($search, $pathfile) {
         
-        $file = fopen($pathfile, "r+");
+        $file = fopen($pathfile, 'r+');
  
         while(!feof($file)) {
 
