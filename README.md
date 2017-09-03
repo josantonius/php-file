@@ -14,6 +14,7 @@ PHP library for file management.
 - [Available Methods](#available-methods)
 - [Usage](#usage)
 - [Tests](#tests)
+- [TODO](#-todo)
 - [Contribute](#contribute)
 - [Repository](#repository)
 - [License](#license)
@@ -65,7 +66,12 @@ use Josantonius\File\File;
 Available methods in this library:
 
 ```php
-File::searchString();
+File::exists();
+File::delete();
+File::createDir();
+File::deleteEmptyDir();
+File::deleteDirRecursively();
+File::getFilesFromDir();
 ```
 ### Usage
 
@@ -97,6 +103,12 @@ $loader->addPsr4('Josantonius\\File\\Tests\\', __DIR__ . '/vendor/josantonius/fi
 use Josantonius\File\Tests\FileTest;
 
 ```
+
+## ☑ TODO
+
+- [ ] Expand tests
+- [ ] Expand README files
+
 Available test methods in this library:
 
 ```php

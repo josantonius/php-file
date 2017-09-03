@@ -14,6 +14,7 @@ Biblioteca PHP para manejo de archivos.
 - [Métodos disponibles](#métodos-disponibles)
 - [Uso](#uso)
 - [Tests](#tests)
+- [TODO](#-todo)
 - [Contribuir](#contribuir)
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
@@ -65,7 +66,12 @@ use Josantonius\File\File;
 Métodos disponibles en esta biblioteca:
 
 ```php
-File::searchString();
+File::exists();
+File::delete();
+File::createDir();
+File::deleteEmptyDir();
+File::deleteDirRecursively();
+File::getFilesFromDir();
 ```
 ### Uso
 
@@ -101,6 +107,11 @@ Métodos de prueba disponibles en esta biblioteca:
 ```php
 FileTest::testSearchString();
 ```
+
+## ☑ TODO
+
+- [ ] Completar tests
+- [ ] Completar archivos README
 
 ### Contribuir
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.

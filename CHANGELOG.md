@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.1.3 - 2017-09-03
+
+* Added `Josantonius\File\File::exists()` method.
+* Added `Josantonius\File\File::delete()` method.
+* Added `Josantonius\File\File::createDir()` method.
+* Added `Josantonius\File\File::deleteEmptyDir()` method.
+* Added `Josantonius\File\File::deleteDirRecursively()` method.
+* Added `Josantonius\File\File::getFilesFromDir()` method.
+
 ## 1.1.2 - 2017-07-16
 * Deleted `Josantonius\File\Exception\FileException` class.
 * Deleted `Josantonius\File\Exception\Exceptions` abstract class.
