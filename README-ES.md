@@ -86,7 +86,7 @@ Para ejecutar las [pruebas](tests/File/test) simplemente:
 
 ## ☑ TODO
 
-- [*] Completar tests
+- [x] Completar tests
 - [ ] Completar archivos README
 
 ### Contribuir

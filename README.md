@@ -86,14 +86,8 @@ To run [tests](tests/File/test) simply:
 
 ## ☑ TODO
 
-- [*] Expand tests
+- [x] Expand tests
 - [ ] Expand README files
-
-Available test methods in this library:
-
-```php
-FileTest::testSearchString();
-```
 
 ### Contribute
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.
