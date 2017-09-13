@@ -1,6 +1,6 @@
 {
     "name":        "josantonius/file",
-    "version":     "1.1.3",
+    "version":     "1.1.4",
     "type":        "library",
     "description": "PHP library for file management.",
     "keywords": [
@@ -21,6 +21,8 @@
         }
     ],
     "support": {
+        "issues": "https://github.com/josantonius/php-file/issues",
+        "forum":  "http://stackoverflow.com/tags/josantonius/php-file",
         "source": "https://github.com/josantonius/php-file"
     },
     "config": {
@@ -30,19 +32,20 @@
     "require": {
         "php": "^5.6 || ^7.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "5.7.*"
+    },    
     "autoload": {
         "psr-4": {
-            "Josantonius\\File\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Josantonius\\File\\Tests\\": "tests/"
+            "Josantonius\\File\\": "src/File/"
         }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }

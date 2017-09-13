@@ -1,6 +1,6 @@
 # PHP File library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/file/v/stable)](https://packagist.org/packages/josantonius/file) [![Total Downloads](https://poser.pugx.org/josantonius/file/downloads)](https://packagist.org/packages/josantonius/file) [![Latest Unstable Version](https://poser.pugx.org/josantonius/file/v/unstable)](https://packagist.org/packages/josantonius/file) [![License](https://poser.pugx.org/josantonius/file/license)](https://packagist.org/packages/josantonius/file)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/file/v/stable)](https://packagist.org/packages/josantonius/file) [![Total Downloads](https://poser.pugx.org/josantonius/file/downloads)](https://packagist.org/packages/josantonius/file) [![Latest Unstable Version](https://poser.pugx.org/josantonius/file/v/unstable)](https://packagist.org/packages/josantonius/file) [![License](https://poser.pugx.org/josantonius/file/license)](https://packagist.org/packages/josantonius/file) [![Travis](https://travis-ci.org/Josantonius/PHP-File.svg)](https://travis-ci.org/Josantonius/PHP-File)
 
 [English version](README.md)
 
@@ -19,16 +19,6 @@ Biblioteca PHP para manejo de archivos.
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
 - [Copyright](#copyright)
-
----
-
-<p align="center"><strong>Echa un vistazo al código</strong></p>
-
-<p align="center">
-  <a href="https://youtu.be/DNsyo9iVPq8" title="Echa un vistazo al código">
-  	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
-  </a>
-</p>
 
 ---
 
@@ -82,35 +72,21 @@ Ejemplo de uso para esta biblioteca:
 require __DIR__ . '/vendor/autoload.php';
 
 use Josantonius\File\File;
-
-$search = 'Morbi';
-
-$filepath = getcwd() . '/' . 'resources/file.txt';
-
-File::searchString($search, $filepath); /* bool(true) */
 ```
 
 ### Tests 
 
-Para utilizar la clase de [pruebas](tests), simplemente:
+Para ejecutar las [pruebas](tests/File/test) simplemente:
 
-```php
-<?php
-$loader = require __DIR__ . '/vendor/autoload.php';
+    $ git clone https://github.com/Josantonius/PHP-File.git
+    
+    $ cd PHP-File
 
-$loader->addPsr4('Josantonius\\File\\Tests\\', __DIR__ . '/vendor/josantonius/file/tests');
-
-use Josantonius\File\Tests\FileTest;
-```
-Métodos de prueba disponibles en esta biblioteca:
-
-```php
-FileTest::testSearchString();
-```
+    $ phpunit
 
 ## ☑ TODO
 
-- [ ] Completar tests
+- [*] Completar tests
 - [ ] Completar archivos README
 
 ### Contribuir
