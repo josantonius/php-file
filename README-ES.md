@@ -14,7 +14,7 @@ Biblioteca PHP para manejo de archivos.
 - [Métodos disponibles](#métodos-disponibles)
 - [Uso](#uso)
 - [Tests](#tests)
-- [TODO](#-todo)
+- [Tareas pendientes](#-tareas-pendientes)
 - [Contribuir](#contribuir)
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
@@ -84,7 +84,7 @@ Para ejecutar las [pruebas](tests/File/Test) simplemente:
 
     $ phpunit
 
-## ☑ TODO
+## ☑ Tareas pendientes
 
 - [x] Completar tests
 - [ ] Completar archivos README
