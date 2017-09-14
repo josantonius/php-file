@@ -86,10 +86,11 @@ To run [tests](tests/File/Test) simply:
 
 ## ☑ TODO
 
-- [x] Expand tests
-- [ ] Expand README files
+- [x] Create tests
+- [ ] Improve documentation
 
 ### Contribute
+
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.
 1. Fork the repository on GitHub to start making your changes.
 1. Write one or more tests for the new feature or that expose the bug.

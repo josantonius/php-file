@@ -87,7 +87,7 @@ Para ejecutar las [pruebas](tests/File/Test) simplemente:
 ## ☑ Tareas pendientes
 
 - [x] Completar tests
-- [ ] Completar archivos README
+- [ ] Mejorar la documentación
 
 ### Contribuir
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
