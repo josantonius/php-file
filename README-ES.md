@@ -76,7 +76,7 @@ use Josantonius\File\File;
 
 ### Tests 
 
-Para ejecutar las [pruebas](tests/File/test) simplemente:
+Para ejecutar las [pruebas](tests/File/Test) simplemente:
 
     $ git clone https://github.com/Josantonius/PHP-File.git
     
