@@ -14,6 +14,8 @@
 * Added `File/_config.yml` file.
 * Added `File/.travis.yml` file.
 
+* Added `Josantonius\File\Test\FileTest::CopyDirRecursively()` method.
+
 * Deleted `Josantonius\File\Tests\FileTest::testSearchString()` method.
 
 * Deleted `Josantonius\File\Tests\FileTest` class.

@@ -60,6 +60,7 @@ File::exists();
 File::delete();
 File::createDir();
 File::deleteEmptyDir();
+File::CopyDirRecursively();
 File::deleteDirRecursively();
 File::getFilesFromDir();
 ```

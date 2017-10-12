@@ -174,6 +174,40 @@ class FileTest extends TestCase {
     }
 
    /**
+     * Test copy directory recursively.
+     *
+     * @since 1.1.4
+     *
+     * @return void
+     */
+    public function testCopyDirRecursively() {
+
+        File::createDir(__DIR__ . '/test/test/test/');
+
+        touch(__DIR__ . '/test/test/test/test.txt');
+
+        $this->assertTrue(
+
+            File::copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/')
+        );
+    }
+
+   /**
+     * Test copy missing directory recursively.
+     *
+     * @since 1.1.4
+     *
+     * @return void
+     */
+    public function testCopyMissingDirRecursively() {
+
+        $this->assertFalse(
+
+            File::deleteDirRecursively(__DIR__ . '/unknown/')
+        );
+    }
+
+   /**
      * Test delete directory recursively.
      *
      * @since 1.1.4
@@ -182,13 +216,14 @@ class FileTest extends TestCase {
      */
     public function testDeleteDirRecursively() {
 
-        File::createDir(__DIR__ . '/test/test/test/');
-
-        touch(__DIR__ . '/test/test/test/test.txt');
-
         $this->assertTrue(
 
             File::deleteDirRecursively(__DIR__ . '/test/')
+        );
+
+        $this->assertTrue(
+
+            File::deleteDirRecursively(__DIR__ . '/copy/')
         );
     }
 

@@ -88,6 +88,40 @@ class File {
     }
 
     /**
+     * Copy directory recursively.
+     *
+     * @since 1.1.4
+     *
+     * @param string $fromPath → path from copy
+     * @param string $toPath   → path to copy
+     *
+     * @return boolean
+     */
+    public static function CopyDirRecursively($from, $to) {
+
+        if (!$path = self::getFilesFromDir($from)) { return false; }
+
+        self::createDir($to = rtrim($to, '/') . '/');
+        
+        foreach($path as $file) {
+
+            if ($file->isFile()) {
+
+                if (!copy($file->getRealPath(), $to.$file->getFilename())) {
+
+                    return false;
+                }
+            
+            } else if (!$file->isDot() && $file->isDir()) {
+                
+                self::CopyDirRecursively($file->getRealPath(), $to . $path);
+            }
+        }
+
+        return true;
+    }
+
+    /**
      * Delete empty directory.
      *
      * @since 1.1.3
