@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6e7fb1681697432f2f95027a31485627
 {
+    public static $files = array (
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
@@ -47,7 +51,8 @@ class ComposerStaticInit6e7fb1681697432f2f95027a31485627
         ),
         'Josantonius\\File\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/File',
+            0 => __DIR__ . '/../..' . '/src',
+            1 => __DIR__ . '/../..' . '/tests',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
