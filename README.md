@@ -22,15 +22,15 @@ PHP library for file management.
 
 ---
 
-### Requirements
+## Requirements
 
-This library is supported by `PHP versions 5.6` or higher and is compatible with `HHVM versions 3.0` or higher.
+This library is supported by **PHP versions 5.6** or higher and is compatible with **HHVM versions 3.0** or higher.
 
-### Installation
+## Installation
 
 The preferred way to install this extension is through [Composer](http://getcomposer.org/download/).
 
-To install `PHP File library`, simply:
+To install **PHP File library**, simply:
 
     $ composer require Josantonius/File
 
@@ -48,11 +48,11 @@ Or **install it manually**:
 
     $ wget https://raw.githubusercontent.com/Josantonius/PHP-File/master/src/File.php
 
-### Available Methods
+## Available Methods
 
 Available methods in this library:
 
-`Check if a file exists in a path or url:`
+### - Check if a file exists in a path or url:
 
 ```php
 File::exists($file);
@@ -64,7 +64,7 @@ File::exists($file);
 
 **# Return** (boolean)
 
-`Delete file if exists:`
+### - Delete file if exists:
 
 ```php
 File::delete($file);
@@ -76,7 +76,7 @@ File::delete($file);
 
 **# Return** (boolean)
 
-`Create directory if not exists:`
+### - Create directory if not exists:
 
 ```php
 File::createDir($path);
@@ -88,7 +88,7 @@ File::createDir($path);
 
 **# Return** (boolean)
 
-`Copy directory recursively:`
+### - Copy directory recursively:
 
 ```php
 File::copyDirRecursively($from, $to);
@@ -101,7 +101,7 @@ File::copyDirRecursively($from, $to);
 
 **# Return** (boolean)
 
-`Delete empty directory:`
+### - Delete empty directory:
 
 ```php
 File::deleteEmptyDir($path);
@@ -113,7 +113,7 @@ File::deleteEmptyDir($path);
 
 **# Return** (boolean)
 
-`Delete directory recursively:`
+### - Delete directory recursively:
 
 ```php
 File::deleteDirRecursively($path);
@@ -125,7 +125,7 @@ File::deleteDirRecursively($path);
 
 **# Return** (boolean)
 
-`Get files from directory:`
+### - Get files from directory:
 
 ```php
 File::getFilesFromDir($path);
@@ -137,9 +137,9 @@ File::getFilesFromDir($path);
 
 **# Return** (boolean)
 
-### Quick Start
+## Quick Start
 
-To use this class with `Composer`:
+To use this library with **Composer**:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -147,7 +147,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Josantonius\File\File;
 ```
 
-Or If you installed it `manually`, use it:
+Or If you installed it **manually**, use it:
 
 ```php
 require_once __DIR__ . '/File.php';
@@ -155,67 +155,67 @@ require_once __DIR__ . '/File.php';
 use Josantonius\File\File;
 ```
 
-### Usage
+## Usage
 
 Example of use for this library:
 
-**Check if a local file exists:**
+### - Check if a local file exists:
 
 ```php
 <?php
 File::exists('path/to/file.php');
 ```
 
-**Check if a external file exists:**
+### - Check if a external file exists:
 
 ```php
 <?php
 File::exists('https://raw.githubusercontent.com/Josantonius/PHP-File/master/composer.json');
 ```
 
-**Delete a local file:**
+### - Delete a local file:
 
 ```php
 <?php
 File::delete(__DIR__ . '/test.txt');
 ```
 
-**Create directory:**
+### - Create directory:
 
 ```php
 <?php
 File::createDir(__DIR__ . '/test/');
 ```
 
-**Delete empty directory:**
+### - Delete empty directory:
 
 ```php
 <?php
 File::deleteEmptyDir(__DIR__ . '/test/');
 ```
 
-**Delete directory recursively:**
+### - Delete directory recursively:
 
 ```php
 <?php
 File::deleteDirRecursively(__DIR__ . '/test/');
 ```
 
-**Copy directory recursively:**
+### - Copy directory recursively:
 
 ```php
 <?php
 File::copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/');
 ```
 
-**Get file paths from directory:**
+### - Get file paths from directory:
 
 ```php
 <?php
 get_class(File::getFilesFromDir(__DIR__));
 ```
 
-### Tests 
+## Tests 
 
 To run [tests](tests) you just need [Composer](http://getcomposer.org/download/) and to execute the following:
 
@@ -242,7 +242,7 @@ Run all previous tests:
 - [x] Create tests
 - [x] Improve documentation
 
-### Contribute
+## Contribute
 
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.
 1. Fork the repository on GitHub to start making your changes.
@@ -252,15 +252,15 @@ Run all previous tests:
 
 This is intended for large and long-lived objects.
 
-### Repository
+## Repository
 
 All files in this repository were created and uploaded automatically with [Reposgit Creator](https://github.com/Josantonius/BASH-Reposgit).
 
-### License
+## License
 
 This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
 
-### Copyright
+## Copyright
 
 2017 Josantonius, [josantonius.com](https://josantonius.com/)
 

@@ -22,15 +22,15 @@ Biblioteca PHP para manejo de archivos.
 
 ---
 
-### Requisitos
+## Requisitos
 
-Esta clase es soportada por versiones de `PHP 5.6` o superiores y es compatible con versiones de `HHVM 3.0` o superiores.
+Esta clase es soportada por versiones de **PHP 5.6** o superiores y es compatible con versiones de **HHVM 3.0** o superiores.
 
-### Instalación 
+## Instalación 
 
 La mejor forma de instalar esta extensión es a través de [Composer](http://getcomposer.org/download/).
 
-Para instalar `PHP File library`, simplemente escribe:
+Para instalar **PHP File library**, simplemente escribe:
 
     $ composer require Josantonius/File
 
@@ -48,11 +48,11 @@ O **instalarlo manualmente**:
 
     $ wget https://raw.githubusercontent.com/Josantonius/PHP-File/master/src/File.php
 
-### Métodos disponibles
+## Métodos disponibles
 
 Métodos disponibles en esta biblioteca:
 
-`Comprobar si existe un archivo en una ruta o url:`
+### - Comprobar si existe un archivo en una ruta o url:
 
 ```php
 File::exists($file);
@@ -64,7 +64,7 @@ File::exists($file);
 
 **# Return** (boolean)
 
-`Eliminar archivos si existe:`
+### - Eliminar archivos si existe:
 
 ```php
 File::delete($file);
@@ -76,7 +76,7 @@ File::delete($file);
 
 **# Return** (boolean)
 
-`Crear directorio si no existe:`
+### - Crear directorio si no existe:
 
 ```php
 File::createDir($path);
@@ -88,7 +88,7 @@ File::createDir($path);
 
 **# Return** (boolean)
 
-`Copiar directorio recursivamente:`
+### - Copiar directorio recursivamente:
 
 ```php
 File::copyDirRecursively($from, $to);
@@ -101,7 +101,7 @@ File::copyDirRecursively($from, $to);
 
 **# Return** (boolean)
 
-`Eliminar directorio vacío:`
+### - Eliminar directorio vacío:
 
 ```php
 File::deleteEmptyDir($path);
@@ -113,7 +113,7 @@ File::deleteEmptyDir($path);
 
 **# Return** (boolean)
 
-`Eliminar directorio recursivamente:`
+### - Eliminar directorio recursivamente:
 
 ```php
 File::deleteDirRecursively($path);
@@ -125,7 +125,7 @@ File::deleteDirRecursively($path);
 
 **# Return** (boolean)
 
-`Obtener archivos de un directorio:`
+### - Obtener archivos de un directorio:
 
 ```php
 File::getFilesFromDir($path);
@@ -137,7 +137,9 @@ File::getFilesFromDir($path);
 
 **# Return** (boolean)
 
-### Cómo empezar
+## Cómo empezar
+
+Para utilizar esta biblioteca con **Composer**:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -145,7 +147,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Josantonius\File\File;
 ```
 
-Si la instalaste `manualmente`, utiliza:
+Si la instalaste ### - manualmente### - , utiliza:
 
 ```php
 require_once __DIR__ . '/File.php';
@@ -153,66 +155,66 @@ require_once __DIR__ . '/File.php';
 use Josantonius\File\File;
 ```
 
-### Uso
+## Uso
 
 Ejemplo de uso para esta biblioteca:
 
-**Comprobar si existe un archivo local:**
+### - Comprobar si existe un archivo local:
 
 ```php
 <?php
 File::exists('path/to/file.php');
 ```
 
-**Comprobar si existe un archivo exteno:**
+### - Comprobar si existe un archivo exteno:
 
 ```php
 <?php
 File::exists('https://raw.githubusercontent.com/Josantonius/PHP-File/master/composer.json');
 ```
-Eliminar un archivo local:**
+Eliminar un archivo local:
 
 ```php
 <?php
 File::delete(__DIR__ . '/test.txt');
 ```
 
-**Crear directorio:**
+### - Crear directorio:
 
 ```php
 <?php
 File::createDir(__DIR__ . '/test/');
 ```
 
-**Eliminar directorio vacío:**
+### - Eliminar directorio vacío:
 
 ```php
 <?php
 File::deleteEmptyDir(__DIR__ . '/test/');
 ```
 
-**Eliminar directorio recursivamente:**
+### - Eliminar directorio recursivamente:
 
 ```php
 <?php
 File::deleteDirRecursively(__DIR__ . '/test/');
 ```
 
-**Copiar directorio recursivamente:**
+### - Copiar directorio recursivamente:
 
 ```php
 <?php
 File::copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/');
 ```
 
-**Obtener archivos de un directorio:**
+### - Obtener archivos de un directorio:
 
 ```php
 <?php
 get_class(File::getFilesFromDir(__DIR__));
 ```
 
-### Tests 
+## Tests 
 
 Para ejecutar las [pruebas](tests/File/Test) simplemente:
 
@@ -227,7 +229,7 @@ Para ejecutar las [pruebas](tests/File/Test) simplemente:
 - [x] Completar tests
 - [x] Mejorar la documentación
 
-### Contribuir
+## Contribuir
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
 1. Bifurca la rama del repositorio en GitHub para iniciar la operación de ajuste.
 1. Escribe una o más pruebas para la nueva característica o expón el error.
@@ -236,15 +238,15 @@ Para ejecutar las [pruebas](tests/File/Test) simplemente:
 
 Esto está pensado para proyectos grandes y de larga duración.
 
-### Repositorio
+## Repositorio
 
 Los archivos de este repositorio se crearon y subieron automáticamente con [Reposgit Creator](https://github.com/Josantonius/BASH-Reposgit).
 
-### Licencia
+## Licencia
 
 Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
 
-### Copyright
+## Copyright
 
 2017 Josantonius, [josantonius.com](https://josantonius.com/)
 
