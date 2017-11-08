@@ -8,7 +8,6 @@
  * @link       https://github.com/Josantonius/PHP-File
  * @since      1.1.4
  */
-
 namespace Josantonius\File;
 
 use PHPUnit\Framework\TestCase;
@@ -24,8 +23,6 @@ class FileTest extends TestCase
      * Test if a local file exists.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testIfLocalFileExists()
     {
@@ -38,8 +35,6 @@ class FileTest extends TestCase
      * Test if a local file doesn't exists.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testIfLocalFileDoesNotExists()
     {
@@ -52,8 +47,6 @@ class FileTest extends TestCase
      * Test if a external file exists.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testIfExternalFileExists()
     {
@@ -66,8 +59,6 @@ class FileTest extends TestCase
      * Test if a external file doesn't exists.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testIfExternalFileDoesNotExists()
     {
@@ -80,8 +71,6 @@ class FileTest extends TestCase
      * Test delete a local file.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testDeleteLocalFile()
     {
@@ -96,8 +85,6 @@ class FileTest extends TestCase
      * Test delete missing local file.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testDeleteMissingLocalFile()
     {
@@ -110,8 +97,6 @@ class FileTest extends TestCase
      * Test create directory.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testCreateDir()
     {
@@ -124,8 +109,6 @@ class FileTest extends TestCase
      * Test error to create directory.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testCreateDirError()
     {
@@ -138,8 +121,6 @@ class FileTest extends TestCase
      * Test delete empty directory.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testDeleteEmptyDir()
     {
@@ -152,8 +133,6 @@ class FileTest extends TestCase
      * Test error to delete empty directory.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testDeleteEmptyDirError()
     {
@@ -166,8 +145,6 @@ class FileTest extends TestCase
      * Test copy directory recursively.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testCopyDirRecursively()
     {
@@ -184,8 +161,6 @@ class FileTest extends TestCase
      * Test copy missing directory recursively.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testCopyMissingDirRecursively()
     {
@@ -198,8 +173,6 @@ class FileTest extends TestCase
      * Test delete directory recursively.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testDeleteDirRecursively()
     {
@@ -216,8 +189,6 @@ class FileTest extends TestCase
      * Test delete missing directory recursively.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testDeleteMissingDirRecursively()
     {
@@ -230,8 +201,6 @@ class FileTest extends TestCase
      * Test get files from directory.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testGetFilesFromDir()
     {
@@ -245,8 +214,6 @@ class FileTest extends TestCase
      * Test get files from missing directory.
      *
      * @since 1.1.4
-     *
-     * @return void
      */
     public function testGetFilesFromMissingDir()
     {
