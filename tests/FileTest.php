@@ -20,6 +20,38 @@ use PHPUnit\Framework\TestCase;
 class FileTest extends TestCase
 {
     /**
+     * File instance.
+     *
+     * @since 1.1.5
+     *
+     * @var object
+     */
+    protected $File;
+
+    /**
+     * Set up.
+     *
+     * @since 1.1.5
+     */
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->File = new File;
+    }
+
+    /**
+     * Check if it is an instance of File.
+     *
+     * @since 1.1.5
+     */
+    public function testIsInstanceOfFile()
+    {
+        $actual = $this->File;
+        $this->assertInstanceOf('Josantonius\File\File', $actual);
+    }
+
+    /**
      * Test if a local file exists.
      *
      * @since 1.1.4
@@ -27,7 +59,7 @@ class FileTest extends TestCase
     public function testIfLocalFileExists()
     {
         $this->assertTrue(
-            File::exists(__FILE__)
+            $this->File->exists(__FILE__)
         );
     }
 
@@ -39,7 +71,7 @@ class FileTest extends TestCase
     public function testIfLocalFileDoesNotExists()
     {
         $this->assertFalse(
-            File::exists(__DIR__ . '/test.txt')
+            $this->File->exists(__DIR__ . '/test.txt')
         );
     }
 
@@ -51,7 +83,7 @@ class FileTest extends TestCase
     public function testIfExternalFileExists()
     {
         $this->assertTrue(
-            File::exists('https://raw.githubusercontent.com/Josantonius/PHP-File/master/composer.json')
+            $this->File->exists('https://raw.githubusercontent.com/Josantonius/PHP-File/master/composer.json')
         );
     }
 
@@ -63,7 +95,7 @@ class FileTest extends TestCase
     public function testIfExternalFileDoesNotExists()
     {
         $this->assertFalse(
-            File::exists('https://raw.githubusercontent.com/unknown.json')
+            $this->File->exists('https://raw.githubusercontent.com/unknown.json')
         );
     }
 
@@ -77,7 +109,7 @@ class FileTest extends TestCase
         touch(__DIR__ . '/test.txt');
 
         $this->assertTrue(
-            File::delete(__DIR__ . '/test.txt')
+            $this->File->delete(__DIR__ . '/test.txt')
         );
     }
 
@@ -89,7 +121,7 @@ class FileTest extends TestCase
     public function testDeleteMissingLocalFile()
     {
         $this->assertFalse(
-            File::delete(__DIR__ . '/test.txt')
+            $this->File->delete(__DIR__ . '/test.txt')
         );
     }
 
@@ -101,7 +133,7 @@ class FileTest extends TestCase
     public function testCreateDir()
     {
         $this->assertTrue(
-            File::createDir(__DIR__ . '/test/')
+            $this->File->createDir(__DIR__ . '/test/')
         );
     }
 
@@ -113,7 +145,7 @@ class FileTest extends TestCase
     public function testCreateDirError()
     {
         $this->assertFalse(
-            File::createDir('')
+            $this->File->createDir('')
         );
     }
 
@@ -125,7 +157,7 @@ class FileTest extends TestCase
     public function testDeleteEmptyDir()
     {
         $this->assertTrue(
-            File::deleteEmptyDir(__DIR__ . '/test/')
+            $this->File->deleteEmptyDir(__DIR__ . '/test/')
         );
     }
 
@@ -137,7 +169,7 @@ class FileTest extends TestCase
     public function testDeleteEmptyDirError()
     {
         $this->assertFalse(
-            File::deleteEmptyDir(__DIR__ . '/test/')
+            $this->File->deleteEmptyDir(__DIR__ . '/test/')
         );
     }
 
@@ -148,12 +180,12 @@ class FileTest extends TestCase
      */
     public function testCopyDirRecursively()
     {
-        File::createDir(__DIR__ . '/test/test/test/');
+        $this->File->createDir(__DIR__ . '/test/test/test/');
 
         touch(__DIR__ . '/test/test/test/test.txt');
 
         $this->assertTrue(
-            File::copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/')
+            $this->File->copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/')
         );
     }
 
@@ -165,7 +197,7 @@ class FileTest extends TestCase
     public function testCopyMissingDirRecursively()
     {
         $this->assertFalse(
-            File::deleteDirRecursively(__DIR__ . '/unknown/')
+            $this->File->deleteDirRecursively(__DIR__ . '/unknown/')
         );
     }
 
@@ -177,11 +209,11 @@ class FileTest extends TestCase
     public function testDeleteDirRecursively()
     {
         $this->assertTrue(
-            File::deleteDirRecursively(__DIR__ . '/test/')
+            $this->File->deleteDirRecursively(__DIR__ . '/test/')
         );
 
         $this->assertTrue(
-            File::deleteDirRecursively(__DIR__ . '/copy/')
+            $this->File->deleteDirRecursively(__DIR__ . '/copy/')
         );
     }
 
@@ -193,7 +225,7 @@ class FileTest extends TestCase
     public function testDeleteMissingDirRecursively()
     {
         $this->assertFalse(
-            File::deleteDirRecursively(__DIR__ . '/test/')
+            $this->File->deleteDirRecursively(__DIR__ . '/test/')
         );
     }
 
@@ -206,7 +238,7 @@ class FileTest extends TestCase
     {
         $this->assertContains(
             'DirectoryIterator',
-            get_class(File::getFilesFromDir(__DIR__))
+            get_class($this->File->getFilesFromDir(__DIR__))
         );
     }
 
@@ -218,7 +250,7 @@ class FileTest extends TestCase
     public function testGetFilesFromMissingDir()
     {
         $this->assertFalse(
-            File::getFilesFromDir('')
+            $this->File->getFilesFromDir('')
         );
     }
 }
