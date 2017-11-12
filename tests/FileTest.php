@@ -22,7 +22,7 @@ class FileTest extends TestCase
     /**
      * File instance.
      *
-     * @since 1.1.5
+     * @since 1.1.6
      *
      * @var object
      */
@@ -31,7 +31,7 @@ class FileTest extends TestCase
     /**
      * Set up.
      *
-     * @since 1.1.5
+     * @since 1.1.6
      */
     public function setUp()
     {
@@ -43,7 +43,7 @@ class FileTest extends TestCase
     /**
      * Check if it is an instance of File.
      *
-     * @since 1.1.5
+     * @since 1.1.6
      */
     public function testIsInstanceOfFile()
     {
