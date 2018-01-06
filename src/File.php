@@ -2,18 +2,16 @@
 /**
  * PHP library for file management.
  *
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link       https://github.com/Josantonius/PHP-File
- * @since      1.0.0
+ * @author    Josantonius <hello@josantonius.com>
+ * @copyright 2017 - 2018 (c) Josantonius - PHP-File
+ * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
+ * @link      https://github.com/Josantonius/PHP-File
+ * @since     1.0.0
  */
 namespace Josantonius\File;
 
 /**
  * File handler.
- *
- * @since 1.0.0
  */
 class File
 {

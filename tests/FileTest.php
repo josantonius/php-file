@@ -2,11 +2,11 @@
 /**
  * PHP library for file management.
  *
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link       https://github.com/Josantonius/PHP-File
- * @since      1.1.4
+ * @author    Josantonius <hello@josantonius.com>
+ * @copyright 2017 - 2018 (c) Josantonius - PHP-File
+ * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
+ * @link      https://github.com/Josantonius/PHP-File
+ * @since     1.1.4
  */
 namespace Josantonius\File;
 
@@ -14,8 +14,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests class for File library.
- *
- * @since 1.1.4
  */
 class FileTest extends TestCase
 {
@@ -47,210 +45,209 @@ class FileTest extends TestCase
      */
     public function testIsInstanceOfFile()
     {
-        $actual = $this->File;
-        $this->assertInstanceOf('Josantonius\File\File', $actual);
+        $this->assertInstanceOf('Josantonius\File\File', $this->File);
     }
 
     /**
      * Test if a local file exists.
-     *
-     * @since 1.1.4
      */
     public function testIfLocalFileExists()
     {
+        $file = $this->File;
+
         $this->assertTrue(
-            $this->File->exists(__FILE__)
+            $file::exists(__FILE__)
         );
     }
 
     /**
      * Test if a local file doesn't exists.
-     *
-     * @since 1.1.4
      */
     public function testIfLocalFileDoesNotExists()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->exists(__DIR__ . '/test.txt')
+            $file::exists(__DIR__ . '/test.txt')
         );
     }
 
     /**
      * Test if a external file exists.
-     *
-     * @since 1.1.4
      */
     public function testIfExternalFileExists()
     {
+        $file = $this->File;
+
         $this->assertTrue(
-            $this->File->exists('https://raw.githubusercontent.com/Josantonius/PHP-File/master/composer.json')
+            $file::exists('https://raw.githubusercontent.com/Josantonius/PHP-File/master/composer.json')
         );
     }
 
     /**
      * Test if a external file doesn't exists.
-     *
-     * @since 1.1.4
      */
     public function testIfExternalFileDoesNotExists()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->exists('https://raw.githubusercontent.com/unknown.json')
+            $file::exists('https://raw.githubusercontent.com/unknown.json')
         );
     }
 
     /**
      * Test delete a local file.
-     *
-     * @since 1.1.4
      */
     public function testDeleteLocalFile()
     {
+        $file = $this->File;
+
         touch(__DIR__ . '/test.txt');
 
         $this->assertTrue(
-            $this->File->delete(__DIR__ . '/test.txt')
+            $file::delete(__DIR__ . '/test.txt')
         );
     }
 
     /**
      * Test delete missing local file.
-     *
-     * @since 1.1.4
      */
     public function testDeleteMissingLocalFile()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->delete(__DIR__ . '/test.txt')
+            $file::delete(__DIR__ . '/test.txt')
         );
     }
 
     /**
      * Test create directory.
-     *
-     * @since 1.1.4
      */
     public function testCreateDir()
     {
+        $file = $this->File;
+
         $this->assertTrue(
-            $this->File->createDir(__DIR__ . '/test/')
+            $file::createDir(__DIR__ . '/test/')
         );
     }
 
     /**
      * Test error to create directory.
-     *
-     * @since 1.1.4
      */
     public function testCreateDirError()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->createDir('')
+            $file::createDir('')
         );
     }
 
     /**
      * Test delete empty directory.
-     *
-     * @since 1.1.4
      */
     public function testDeleteEmptyDir()
     {
+        $file = $this->File;
+
         $this->assertTrue(
-            $this->File->deleteEmptyDir(__DIR__ . '/test/')
+            $file::deleteEmptyDir(__DIR__ . '/test/')
         );
     }
 
     /**
      * Test error to delete empty directory.
-     *
-     * @since 1.1.4
      */
     public function testDeleteEmptyDirError()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->deleteEmptyDir(__DIR__ . '/test/')
+            $file::deleteEmptyDir(__DIR__ . '/test/')
         );
     }
 
     /**
      * Test copy directory recursively.
-     *
-     * @since 1.1.4
      */
     public function testCopyDirRecursively()
     {
-        $this->File->createDir(__DIR__ . '/test/test/test/');
+        $file = $this->File;
+
+        $file::createDir(__DIR__ . '/test/test/test/');
 
         touch(__DIR__ . '/test/test/test/test.txt');
 
         $this->assertTrue(
-            $this->File->copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/')
+            $file::copyDirRecursively(__DIR__ . '/test/', __DIR__ . '/copy/')
         );
     }
 
     /**
      * Test copy missing directory recursively.
-     *
-     * @since 1.1.4
      */
     public function testCopyMissingDirRecursively()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->deleteDirRecursively(__DIR__ . '/unknown/')
+            $file::deleteDirRecursively(__DIR__ . '/unknown/')
         );
     }
 
     /**
      * Test delete directory recursively.
-     *
-     * @since 1.1.4
      */
     public function testDeleteDirRecursively()
     {
+        $file = $this->File;
+
         $this->assertTrue(
-            $this->File->deleteDirRecursively(__DIR__ . '/test/')
+            $file::deleteDirRecursively(__DIR__ . '/test/')
         );
 
         $this->assertTrue(
-            $this->File->deleteDirRecursively(__DIR__ . '/copy/')
+            $file::deleteDirRecursively(__DIR__ . '/copy/')
         );
     }
 
     /**
      * Test delete missing directory recursively.
-     *
-     * @since 1.1.4
      */
     public function testDeleteMissingDirRecursively()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->deleteDirRecursively(__DIR__ . '/test/')
+            $file::deleteDirRecursively(__DIR__ . '/test/')
         );
     }
 
     /**
      * Test get files from directory.
-     *
-     * @since 1.1.4
      */
     public function testGetFilesFromDir()
     {
+        $file = $this->File;
+
         $this->assertContains(
             'DirectoryIterator',
-            get_class($this->File->getFilesFromDir(__DIR__))
+            get_class($file::getFilesFromDir(__DIR__))
         );
     }
 
     /**
      * Test get files from missing directory.
-     *
-     * @since 1.1.4
      */
     public function testGetFilesFromMissingDir()
     {
+        $file = $this->File;
+
         $this->assertFalse(
-            $this->File->getFilesFromDir('')
+            $file::getFilesFromDir('')
         );
     }
 }
