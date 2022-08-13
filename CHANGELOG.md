@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.1.8 - 2022-08-13
+
+The repository was archived.
+
+> For filesystem operations and file/directory path manipulation you can use symfony/filesystem.
+
 ## 1.1.7 - 2018-01-06
 
 * The tests were fixed.
